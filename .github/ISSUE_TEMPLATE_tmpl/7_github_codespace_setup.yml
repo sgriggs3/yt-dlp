@@ -1,0 +1,56 @@
+name: GitHub Codespace Setup
+description: Instructions for configuring and installing the program on a self-hosted server on GitHub Codespace
+labels: [setup, codespace]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## GitHub Codespace Setup Instructions
+
+        Follow these steps to configure and install the program on a self-hosted server on GitHub Codespace. This will allow you to access the YouTube downloader via a remote URL.
+
+  - type: checkboxes
+    id: setup_checklist
+    attributes:
+      label: Setup Checklist
+      description: |
+        Carefully read and work through this checklist to ensure proper setup:
+      options:
+        - label: I have a GitHub account and access to GitHub Codespaces
+          required: true
+        - label: I have created a new GitHub Codespace for this repository
+          required: true
+        - label: I have read the instructions below and understand the steps involved
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Step 1: Set up the GitHub Codespace environment
+
+        1. Open the GitHub repository in your browser.
+        2. Click on the "Code" button and select "Open with Codespaces".
+        3. Create a new Codespace or open an existing one.
+
+        ### Step 2: Install dependencies
+
+        1. Open the terminal in the GitHub Codespace.
+        2. Run the following command to install the required dependencies:
+           ```sh
+           pip install -r requirements.txt
+           ```
+
+        ### Step 3: Configure the server
+
+        1. In the terminal, run the following command to start the server:
+           ```sh
+           python server.py
+           ```
+        2. Note the URL provided by the terminal output. This is the remote URL you will use to access the YouTube downloader.
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Provide any additional information or ask questions related to the setup process
+      placeholder: Enter your information or questions here
